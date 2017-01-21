@@ -1,33 +1,57 @@
-
-// Tabs
-// -------------------
-
-// Displays selectable tabs above the editor.
-// Overrides: atom/tabs
+/**
+ * KDE Breeze Dark UI theme
+ * Tab styling
+ */
 
 .tab-bar {
   background-color: @tab-bar-background-color;
-  border-bottom: 1px solid @base-border-color;
+
+  border-top-left-radius: 3px;
 
   .tab {
-    color: @text-color;
     height: @tab-height;
-    line-height: @tab-height;
+
+    color: @text-color;
+
+    border: 1px solid @tab-bar-background-color;
+    border-bottom: 1px solid @base-border-color;
+
+    transition: background 0.25s;
+
     font-size: @font-size;
-    border-right: 1px solid @tab-border-color;
-    background-color: @tab-background-color;
+    line-height: @tab-height;
+
     &.active {
       color: @text-color-selected;
       background-color: @tab-background-color-active;
+
+      border: 1px solid @base-border-color;
+      border-bottom: 1px solid @tab-background-color-active;
+      border-radius: 3px 3px 0 0;
     }
 
+    &:not(.active):hover {
+      background: @kde-background-hover;
+    }
+
+    &:first-child {
+      border-top-left-radius: 3px;
+    }
+    &:not(.active) + .tab:not(.active) {
+      border-left: 1px solid @base-border-color;
+    }
+    &:last-child {
+      border-top-right-radius: 3px;
+    }
 
     // Modified Icon (the blue circle) -------------------
     &.modified:not(:hover) .close-icon {
+      margin-top: -3px;
+
+      border-color: @text-color-info;
+
       top: 50%;
       right: @component-padding + 4px; // 4px -> half of icon size
-      margin-top: -3px;
-      border-color: @text-color-info;
     }
     &.modified:hover .close-icon {
       color: currentColor;
@@ -46,9 +70,10 @@
     // Dragging -------------------
     // Styles get applied while dragging a tab
     &.is-dragging {
+      opacity: 0.5;
       background: darken(@tab-background-color, 10%);
+
       border-color: transparent;
-      opacity: .5;
       & .close-icon {
         visibility: hidden;
       }
