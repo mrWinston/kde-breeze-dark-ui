@@ -16,7 +16,7 @@
     border: 1px solid @tab-bar-background-color;
     border-bottom: 1px solid @base-border-color;
 
-    transition: background 0.25s;
+    transition: all 0.25s;
 
     font-size: @font-size;
     line-height: @tab-height;
@@ -32,6 +32,8 @@
 
     &:not(.active):hover {
       background: @kde-background-hover;
+      border: 1px solid @kde-background-hover;
+      border-bottom: 1px solid @base-border-color;
     }
 
     &:first-child {
@@ -71,9 +73,9 @@
     // Styles get applied while dragging a tab
     &.is-dragging {
       opacity: 0.5;
-      background: darken(@tab-background-color, 10%);
+      background: @base-background-color;
 
-      border-color: transparent;
+      // border: none;
       & .close-icon {
         visibility: hidden;
       }
