@@ -4,7 +4,7 @@
  */
 
 .tab-bar {
-  background-color: @tab-bar-background-color;
+  background-color: @kde-background;
 
   border-top-left-radius: 3px;
 
@@ -13,8 +13,7 @@
 
     color: @text-color;
 
-    border: 1px solid @tab-bar-background-color;
-    border-bottom: 1px solid @base-border-color;
+    border: 1px solid @kde-background;
 
     transition: all 0.25s;
 
@@ -25,22 +24,19 @@
       color: @text-color-selected;
       background-color: @tab-background-color-active;
 
-      border: 1px solid @base-border-color;
-      border-bottom: 1px solid @tab-background-color-active;
-      border-radius: 3px 3px 0 0;
+      border: 1px solid @kde-light-blue;
+      border-bottom: 0px
     }
 
     &:not(.active):hover {
-      background: @kde-background-hover;
+      background: @kde-background;
       border: 1px solid @kde-background-hover;
-      border-bottom: 1px solid @base-border-color;
+      border-bottom: 0px
     }
 
     &:first-child {
-      border-top-left-radius: 3px;
     }
     &:not(.active) + .tab:not(.active) {
-      border-left: 1px solid @base-border-color;
     }
     &:last-child {
       border-top-right-radius: 3px;

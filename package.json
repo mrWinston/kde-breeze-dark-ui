@@ -1,14 +1,14 @@
 {
-  "name": "kde-breeze-dark-ui",
+  "name": "breezy-dark-ui",
   "theme": "ui",
   "version": "1.0.1",
-  "description": "A theme to match KDE Breeze Dark",
+  "description": "Breeze Dark UI Theme for KDE Plasma 5",
   "keywords": [
     "ui",
     "theme"
   ],
-  "repository": "https://github.com/JoshyRobot/kde-breeze-dark-ui",
-  "author": "JoshyRobot",
+  "repository": "https://github.com/mrWinston/kde-breeze-dark-ui",
+  "author": "mrWinston",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

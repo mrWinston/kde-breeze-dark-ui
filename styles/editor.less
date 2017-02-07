@@ -7,7 +7,41 @@
 atom-text-editor {
   background-color: @input-background-color;
 
-  border-left: 1px solid @base-border-color;
+  // border-left: 1px solid @base-border-color;
+  border: 1px solid @kde-light-blue;
+
+  ::-webkit-scrollbar {
+    background-color: @kde-editor-background;
+    width: 12px;
+    height: 12px;
+
+    &-track {
+      background-color: @kde-editor-background;
+      border: 3px solid transparent;
+      background-clip: content-box;
+      border-radius: 6px
+    }
+
+    &-track:hover {
+      background-color: @kde-background-inactive;
+    }
+
+    &-thumb {
+      background-color: @kde-light-blue;
+      border: 3px solid transparent;
+      background-clip: content-box;
+      border-radius: 6px;
+      &:window-inactive {
+        background-color: @shade-5;
+      }
+    }
+
+    &-corner {
+      background-color: @kde-editor-background;
+
+    }
+  }
+
 }
 
 atom-text-editor[mini] {

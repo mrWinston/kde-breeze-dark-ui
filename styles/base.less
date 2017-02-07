@@ -20,3 +20,50 @@ atom-pane {
     border-right: none;
   }
 }
+
+
+  ::-webkit-scrollbar {
+    background-color: @kde-background;
+    width: 12px;
+    height: 12px;
+
+    &-track {
+      background-color: @kde-background;
+      border: 3px solid transparent;
+      background-clip: content-box;
+      border-radius: 6px
+    }
+
+    &-track:hover {
+      background-color: @kde-background-inactive;
+    }
+
+    &-thumb {
+      background-color: @kde-light-blue;
+      border: 3px solid transparent;
+      background-clip: content-box;
+      border-radius: 6px;
+      &:window-inactive {
+        background-color: @kde-background;
+      }
+    }
+
+    &-corner {
+      background-color: @kde-background;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
